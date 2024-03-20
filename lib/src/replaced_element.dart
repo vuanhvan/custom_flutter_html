@@ -122,7 +122,8 @@ class IframeContentElement extends ReplacedElement {
             : JavascriptMode.disabled,
         navigationDelegate: navigationDelegate,
         gestureRecognizers: {
-          Factory<VerticalDragGestureRecognizer>(() => VerticalDragGestureRecognizer())
+          Factory<VerticalDragGestureRecognizer>(
+              () => VerticalDragGestureRecognizer())
         },
       ),
     );
@@ -212,6 +213,13 @@ class VideoContentElement extends ReplacedElement {
             showControls: showControls,
             autoInitialize: true,
             aspectRatio: _width / _height,
+            allowPlaybackSpeedChanging: false,
+            materialProgressColors: ChewieProgressColors(
+              playedColor: Colors.redAccent,
+              handleColor: Colors.red,
+              backgroundColor: Colors.grey,
+              bufferedColor: Colors.deepOrange,
+            ),
           ),
         ),
       ),
