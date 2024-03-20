@@ -154,20 +154,20 @@ class AudioContentElement extends ReplacedElement {
     return Container();
 
     //TODO maybe enable later if the app need audio
-    return Container(
-      width: context.style.width ?? 300,
-      child: ChewieAudio(
-        controller: ChewieAudioController(
-          videoPlayerController: VideoPlayerController.network(
-            src.first ?? "",
-          ),
-          autoPlay: autoplay,
-          looping: loop,
-          showControls: showControls,
-          autoInitialize: true,
-        ),
-      ),
-    );
+    // return Container(
+    //   width: context.style.width ?? 300,
+    //   child: ChewieAudio(
+    //     controller: ChewieAudioController(
+    //       videoPlayerController: VideoPlayerController.network(
+    //         src.first ?? "",
+    //       ),
+    //       autoPlay: autoplay,
+    //       looping: loop,
+    //       showControls: showControls,
+    //       autoInitialize: true,
+    //     ),
+    //   ),
+    // );
   }
 }
 
